@@ -71,10 +71,33 @@ export default function App() {
       )
   }
 
+
+
+  // setting some width style
+  let styleMain = {
+
+  }
+  let styleHeight = {
+
+  }
+  if (window.innerHeight > window.innerWidth) {
+    styleMain = {
+      width: `90%`
+    }
+    styleHeight = {
+      height:"50px"
+    }
+  }
+
+
+
+
+
   const taskElement = task.map(n => {
     return (
       <li
         key={nanoid()}
+        style={styleHeight}
       >
         <div className="main-menu-time">{taskTime}</div>
          {n} 
@@ -85,6 +108,7 @@ export default function App() {
     )
   })
 
+
   return (
     <div className="container">
       {/* Time */}
@@ -92,7 +116,7 @@ export default function App() {
         <h1><span className="time-hour">{time.hour}</span>:<span className="time-minute">{time.minute}</span>:<span className="time-second">{time.second}</span><span className="time-con">{time.con.toUpperCase()}</span></h1>
       </div>
 
-      <div className="main">
+      <div className="main" style={styleMain}>
         {/* Header area */}
         <div className="main-header">
           <div className="main-header-text">
@@ -104,6 +128,7 @@ export default function App() {
         <div className="main-btn">
           <button className="main-btn-add"
             onClick={showFunc}
+            style={styleHeight}
           >
            { !show ? "New Task" : "Done"}
           </button>
@@ -119,10 +144,12 @@ export default function App() {
                   onChange={updateInput}
                   value={input}
                   onKeyDown={handleKey}
+                  style={styleHeight}
           />
           <button 
             className="main-input-submit"
             onClick={addTask}
+            style={styleHeight}
             >Add to task</button>
         </div>
 
@@ -135,6 +162,11 @@ export default function App() {
             {taskElement}
           </ul>
         </div>
+      </div>
+
+      {/* me */}
+      <div className="main-me">
+        <a href="https://www.linkedin.com/in/alamin1964/" target='_blank'>Concept & build by MD. Alamin</a>
       </div>
     </div>
   )

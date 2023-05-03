@@ -47,6 +47,7 @@ ul {
 .main-btn button {
   width: 100%;
   padding: 10px 0;
+  height: 35px;
   background-color: #b467b4;
   border: none;
   color: white;
@@ -105,6 +106,20 @@ ul {
   background: #b467b4;
   border-radius: 5px;
   text-transform: lowercase;
+}
+.main-me {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-me a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+.main-me a:hover {
+  color: #1E1E1E;
 }
 
 .time {
