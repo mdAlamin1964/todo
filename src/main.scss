@@ -107,7 +107,7 @@ ul{
 
         ul li{
             display: grid;
-            grid-template-columns: 15% 75% 10%;
+            grid-template-columns: 18% 72% 10%;
             align-items: center;
             padding: 0 7px;
             height: 35px;
@@ -134,7 +134,7 @@ ul{
 
         // time
         &-time{
-            font-size: 12px;
+            font-size: 10px;
             padding: 4px 0;
             background: $button-color;
             border-radius: 5px;
